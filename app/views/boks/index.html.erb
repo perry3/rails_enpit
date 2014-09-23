@@ -1,0 +1,27 @@
+<h1>Listing boks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @boks.each do |bok| %>
+      <tr>
+        <td><%= bok.title %></td>
+        <td><%= bok.author %></td>
+        <td><%= link_to 'Show', bok %></td>
+        <td><%= link_to 'Edit', edit_bok_path(bok) %></td>
+        <td><%= link_to 'Destroy', bok, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bok', new_bok_path %>
