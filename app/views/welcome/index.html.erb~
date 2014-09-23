@@ -1,0 +1,4 @@
+<h2><Hello Worldh2>
+<p>
+  The time is now: <5= Time.now %>
+</p>
