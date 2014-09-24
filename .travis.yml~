@@ -1,0 +1,11 @@
+language: ruby
+rvm:
+- 2.1.2
+deploy:
+  provider: heroku
+  api_key:
+    secure: TQDppIsUqIZyM6OG+WRWQUdOpF5x94n0OtYUPPqN1q27Cq9vdXCr2r5a99O6oqok4lpYnKbZe1x+w0DWKuUUcOv1Y93d4zeK/TFR4IOILoYdgted8LyK+n0uDMv0B7tkk+p/FCTZHr4v6I5sUW1cHY0Afn/s/KhwttI7zc+xCz4=
+  app: sleepy-oasis-7428
+  on:
+    repo: perry3/rails_enpit
+    branch: travis
