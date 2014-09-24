@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+- 2.1.2
+deploy:
+  provider: heroku
+  api_key:
+    secure: YOOoEpGWdpWH4gUEbwQXKsGSjna79CJtvCP/rhrwvw/u8SQptVDEydNYx1HfZWwlgMUv6KknCAZ7Mb8OWWlEHFGxoxd75DKEI4BdEbyaIe2z4aR3JEQWeGKXpft9IvODtN/jyDV+a8Xe//ka4+wk3dxF2wmSQ66lsUP5U7t1o4M=
+  app: sleepy-oasis-7428
+  on:
+    repo: perry3/rails_enpit
+
+addons:
+  postgresql: "9.3"
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
+  - cp config/database.yml.travis config/database.yml
